@@ -1,0 +1,12 @@
+<div class="card-login">
+    <h1>LOGIN</h1>
+    <form method="POST">
+        <p><label for="id_username">Email:</label> <input type="text" name="username" autofocus="" autocapitalize="none"
+                autocomplete="username" maxlength="150" required="" id="id_username"></p>
+        <p><label for="id_password">Senha:</label> <input type="password" name="password"
+                autocomplete="current-password" required="" id="id_password"></p>
+        {% csrf_token %}
+        <button type="submit">Login</button>
+
+    </form>
+</div>
