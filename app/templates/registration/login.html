@@ -7,40 +7,47 @@
     <title>Login</title>
     <link rel="stylesheet" href="../../static/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Esconder o campo de token CSRF */
+        input[name="csrfmiddlewaretoken"] {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <div class="background-container" style="background-image: url('img-background.png');">
-        <div class="wrapper">
-            <div class="card-login">
-                <form method="POST" action="{% url 'login' %}">
-                    {% csrf_token %}
-                    <h1>Login</h1>
-                    <div class="input-box">
-                        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
-                            maxlength="150" required="" id="id_username" placeholder="Usuário" required>
-                        <i class='bx bxs-user'></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" name="password" autocomplete="current-password" required=""
-                            id="id_password" placeholder="Senha" required>
-                        <i class='bx bxs-lock-alt'></i>
-                    </div>
+    <div class="background-container" ">
+        <div class=" wrapper">
+        <div class="card-login">
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
+                        maxlength="150" required="" id="id_username" placeholder="Usuário" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" autocomplete="current-password" required="" id="id_password"
+                        placeholder="Senha" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
 
-                    <div class="remember-forgot">
-                        <label><input type="checkbox"> Lembre-me</label>
-                        <a href="#">Esqueceu a senha?</a>
-                    </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Lembre-me</label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
 
-                    <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn">Login</button>
 
-                    <div class="register-link">
-                        <p>Não tem uma conta ? <a href="#">Registrar-se</a></p>
-                    </div>
-                </form>
-            </div>
+                <div class="register-link">
+                    <p>Não tem uma conta ? <a href="#">Registrar-se</a></p>
+                </div>
+            </form>
         </div>
+    </div>
     </div>
 
 </body>

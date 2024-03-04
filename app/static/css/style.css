@@ -1,0 +1,173 @@
+/* Importa a fonte "Poppins" do Google Fonts com diversas variantes de peso */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Define as propriedades padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Define a fonte padrão para "Poppins" */
+    font-family: "Poppins", sans-serif;
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Ajuste a altura mínima para ocupar toda a tela */
+    background: url('../images/img-background.png') no-repeat;
+    /* Define a imagem de fundo sem repetição */
+    background-position: center;
+    /* Centraliza a imagem na tela */
+    background-size: cover;
+    /* Redimensiona a imagem para cobrir toda a tela */
+}
+
+/* Define o estilo do contêiner principal */
+.wrapper {
+    width: 420px;
+    background: rgba(117, 117, 117, .2);
+    /* Define o fundo com transparência */
+    border: 2px solid rgba(255, 255, 255, .2);
+    /* Define uma borda com transparência */
+    backdrop-filter: blur(20px);
+    /* Aplica um desfoque ao fundo */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    border-radius: 10px;
+    /* Define um raio de borda para suavizar as bordas */
+    padding: 30px 40px;
+    /* Define o preenchimento interno */
+}
+
+/* Define o estilo do título dentro do contêiner */
+.wrapper h1 {
+    font-size: 36px;
+    /* Define o tamanho da fonte do título */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+/* Define o estilo da caixa de entrada de texto */
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+/* Define o estilo do campo de entrada */
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* Define o fundo como transparente */
+    border: none;
+    /* Remove a borda */
+    outline: none;
+    /* Remove a borda ao focar */
+    border: 2px solid rgba(255, 255, 255, .2);
+    /* Define a borda com transparência */
+    border-radius: 40px;
+    /* Define um raio de borda para suavizar as bordas */
+    font-size: 16px;
+    /* Define o tamanho da fonte */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    padding: 20px 45px 20px 20px;
+    /* Define o preenchimento interno */
+}
+
+/* Define o estilo do espaço reservado do campo de entrada */
+.input-box input::placeholder {
+    color: #fff;
+    /* Define a cor do espaço reservado como branco */
+}
+
+/* Define o estilo do ícone dentro da caixa de entrada */
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+/* Define o estilo do elemento de lembrar/esquecer */
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+/* Define o estilo da entrada do rótulo de lembrar */
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+/* Define o estilo do link de esquecer */
+.remember-forgot a {
+    color: #fff;
+    /* Define a cor do texto do link como branco */
+    text-decoration: none;
+    /* Remove a decoração de texto do link */
+}
+
+/* Define o estilo do link de esquecer ao passar o mouse */
+.remember-forgot a:hover {
+    text-decoration: underline;
+    /* Sublinha o link ao passar o mouse */
+}
+
+/* Define o estilo do botão de login */
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    /* Define o fundo do botão como branco */
+    border: none;
+    /* Remove a borda do botão */
+    outline: none;
+    /* Remove a borda ao focar no botão */
+    border-radius: 40px;
+    /* Define um raio de borda para suavizar as bordas */
+    box-shadow: 0 0 10px rgba(95, 95, 95, 0.1);
+    /* Aplica uma sombra ao botão */
+    cursor: pointer;
+    /* Define o cursor como ponteiro */
+    font-size: 16px;
+    /* Define o tamanho da fonte */
+    color: #333;
+    /* Define a cor do texto como cinza escuro */
+    font-weight: 600;
+    /* Define o peso da fonte como negrito */
+}
+
+/* Define o estilo do link de registro */
+.wrapper .register-link {
+    font-size: 14.5px;
+    /* Define o tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 20px;
+    /* Define uma margem superior */
+}
+
+/* Define o estilo do link de registro ao passar o mouse */
+.register-link p a {
+    color: #fff;
+    /* Define a cor do texto do link como branco */
+    text-decoration: none;
+    /* Remove a decoração de texto do link */
+    font-weight: 600;
+    /* Define o peso da fonte como negrito */
+}
+
+/* Define o estilo do link de registro ao passar o mouse */
+.register-link p a:hover {
+    text-decoration: underline;
+    /* Sublinha o link ao passar o mouse */
+}
