@@ -1,12 +1,48 @@
-<div class="card-login">
-    <h1>LOGIN</h1>
-    <form method="POST">
-        <p><label for="id_username">Email:</label> <input type="text" name="username" autofocus="" autocapitalize="none"
-                autocomplete="username" maxlength="150" required="" id="id_username"></p>
-        <p><label for="id_password">Senha:</label> <input type="password" name="password"
-                autocomplete="current-password" required="" id="id_password"></p>
-        {% csrf_token %}
-        <button type="submit">Login</button>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    </form>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="background-container" style="background-image: url('img-background.png');">
+        <div class="wrapper">
+            <div class="card-login">
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <h1>Login</h1>
+                    <div class="input-box">
+                        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
+                            maxlength="150" required="" id="id_username" placeholder="Usuário" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" autocomplete="current-password" required=""
+                            id="id_password" placeholder="Senha" required>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Lembre-me</label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+
+                    <div class="register-link">
+                        <p>Não tem uma conta ? <a href="#">Registrar-se</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
