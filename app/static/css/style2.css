@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importa a família de fontes Poppins com diversas variações de peso e estilo */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Zera a margem e o preenchimento, define o modelo de caixa como border-box para todos os elementos e define a fonte padrão como Poppins */
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/Cyberwork/TicketWorks/app/static/images/img-background.png') no-repeat;
+    background-position: cover;
+    background-position: center;
+}
+
+/* Estiliza o container de fundo com flexbox para centralizar seu conteúdo vertical e horizontalmente, define uma altura mínima de 100% da altura da viewport e aplica uma imagem de fundo */
+
+.wrapper {
+    position: relative;
+    /* Define a posição como relativa */
+    z-index: 1;
+    /* Garante que o formulário fique acima do vídeo */
+    width: 420px;
+    /* Define a largura do container */
+    background: rgba(117, 117, 117, .2);
+    /* Define a cor de fundo com opacidade */
+    border: 2px solid rgba(255, 255, 255, .2);
+    /* Define uma borda com opacidade */
+    backdrop-filter: blur(20px);
+    /* Aplica um efeito de desfoque ao fundo */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    border-radius: 10px;
+    /* Arredonda os cantos do container */
+    padding: 30px 40px;
+    /* Define o preenchimento interno */
+}
+
+.wrapper .signup-heading {
+    font-size: 36px;
+    /* Define o tamanho da fonte do título */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+}
+
+.wrapper .input-box {
+    position: relative;
+    /* Define a posição como relativa */
+    width: 100%;
+    /* Define a largura da caixa de entrada */
+    height: 50px;
+    /* Define a altura da caixa de entrada */
+    margin: 30px 0;
+    /* Define a margem */
+}
+
+.input-box input {
+    width: 100%;
+    /* Define a largura do campo de entrada */
+    height: 100%;
+    /* Define a altura do campo de entrada */
+    background: transparent;
+    /* Define o fundo do campo de entrada como transparente */
+    border: none;
+    /* Remove a borda */
+    outline: none;
+    /* Remove o contorno */
+    border: 2px solid rgba(255, 255, 255, .2);
+    /* Define a borda com opacidade */
+    border-radius: 40px;
+    /* Arredonda os cantos do campo de entrada */
+    font-size: 16px;
+    /* Define o tamanho da fonte */
+    color: #fff;
+    /* Define a cor do texto como branco */
+    padding: 20px 45px 20px 20px;
+    /* Define o preenchimento interno */
+}
+
+.input-box input::placeholder {
+    color: #fff;
+    /* Define a cor do espaço reservado como branco */
+}
+
+.input-box i {
+    position: absolute;
+    /* Define a posição como absoluta */
+    right: 20px;
+    /* Define a distância da direita */
+    top: 50%;
+    /* Define a distância do topo */
+    transform: translateY(-50%);
+    /* Translada o elemento verticalmente */
+    font-size: 20px;
+    /* Define o tamanho da fonte */
+}
+
+.terms-of-use {
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.terms-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+.register-link p a {
+    color: #fff;
+    /* Define a cor do texto do link como branco */
+    text-decoration: none;
+    /* Remove a decoração de texto do link */
+    font-weight: 600;
+    /* Define o peso da fonte como negrito */
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    /* Define o tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto horizontalmente */
+    margin-top: 20px;
+    /* Define a margem superior */
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+    /* Sublinha o link ao passar o mouse */
+}
+
+.wrapper .btn {
+    width: 100%;
+    /* Define a largura do botão */
+    height: 45px;
+    /* Define a altura do botão */
+    background: #fff;
+    /* Define a cor de fundo do botão como branca */
+    border: none;
+    /* Remove a borda do botão */
+    outline: none;
+    /* Remove o contorno do botão */
+    border-radius: 40px;
+    /* Arredonda os cantos do botão */
+    box-shadow: 0 0 10px rgba(95, 95, 95, 0.1);
+    /* Aplica uma sombra ao botão */
+    cursor: pointer;
+    /* Define o cursor como ponteiro */
+    font-size: 16px;
+    /* Define o tamanho da fonte */
+    color: #333;
+    /* Define a cor do texto como cinza escuro */
+    font-weight: 600;
+    /* Define o peso da fonte como negrito */
+}

@@ -1,32 +1,63 @@
-<h2>Sign Up</h2>
-<form method="post">
-    {% csrf_token %}
-    <p>
-        <label for="id_username">Username:</label>
-        <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username">
-        <span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span>
-    </p>
-    <p>
-        <label for="id_email">Email:</label>
-        <input type="email" name="email" maxlength="254" required="" id="id_email">
-        <span class="helptext">Required. Inform a valid email address.</span>
-    </p>
-    <p>
-        <label for="id_password1">Password:</label>
-        <input type="password" name="password1" autocomplete="new-password" required="" id="id_password1">
-        <span class="helptext"></span>
-    </p>
-    <ul>
-        <li>Your password can’t be too similar to your other personal information.</li>
-        <li>Your password must contain at least 8 characters.</li>
-        <li>Your password can’t be a commonly used password.</li>
-        <li>Your password can’t be entirely numeric.</li>
-    </ul>
-    <p>
-        <label for="id_password2">Password confirmation:</label>
-        <input type="password" name="password2" autocomplete="new-password" required="" id="id_password2">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-        <span class="helptext">Enter the same password as before, for verification.</span>
-    </p>
-    <button type="submit">Sign Up</button>
-</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/Cyberwork/TicketWorks/app/static/css/style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <div class="background-container">
+        <div class="wrapper">
+            <form method="post">
+                {% csrf_token %}
+                <h1 class="signup-heading">Cadastro</h1>
+                <div class="input-box">
+                    <label for="id_username"></label>
+                    <input type="text" placeholder="Usuário" required name="username" maxlength="150" autofocus=""
+                        required="" id="id_username">
+                    <span class="helptext"></span>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <label for="id_email"></label>
+                    <input type="email" placeholder="E-mail" required name="email" maxlength="254" required=""
+                        id="id_email">
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <label for="id_password1"></label>
+                    <input type="password" placeholder="Senha" required name="password1" autocomplete="new-password"
+                        required="" id="id_password1">
+                    <i class='bx bxs-lock-alt'></i>
+                    <span class="helptext"></span>
+                </div>
+                <div class="input-box">
+                    <label for="id_password2"></label>
+                    <input type="password" placeholder="Confirmar senha" name="password2" autocomplete="new-password"
+                        required="" id="id_password2">
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="terms-of-use">
+                    <label><input type="checkbox"> Eu li e concordo com os<a href="#" class="terms-link"> termos de
+                            uso</a></label>
+                </div>
+                <button type="submit" class="btn">Cadastre-se</button>
+
+                <div class="register-link">
+                    <p>Já tem uma conta? <a href="login.html">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
